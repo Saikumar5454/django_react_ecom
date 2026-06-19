@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+    <h2>List Of Products</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+{% for product in products %}
+<tr>
+    <td>{{ product.id }}</td>
+    <td>{{ product.name }}</td>
+    <td>{{ product.price }}</td>
+</tr>
+    
+{% endfor %}
+    
+        </tbody>
+    </table>
+</body>
+</html>
